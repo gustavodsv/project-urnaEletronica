@@ -10,6 +10,7 @@ let lateral = qS('.d-1-right')
 let etapaAtual = 0
 let numero = ''
 let votoBranco = false
+let votos = []
 
 function comecarEtapa(){
     let etapa = etapas[etapaAtual]
@@ -54,8 +55,6 @@ function atualizaInterface(){
             } else{
                 fotosHtml += `<div class="d-1-image"><img src="assets/images/${candidato.fotos[i].url}" alt="" srcset="">${candidato.fotos[i].legenda}</div>`
             }
-
-            
         }
 
         lateral.innerHTML = fotosHtml
@@ -100,11 +99,23 @@ function confirma() {
     let etapa = etapas[etapaAtual]
 
     let votoConfirmado = false
+
     if(votoBranco === true){
         votoConfirmado = true
+
+        votos.push({
+            etapa: etapas[etapaAtual].titulo,
+            voto: 'branco'
+        })
+
         console.log('Voto BRANCO')
     } else if (numero.length === etapa.numeros){
         votoConfirmado = true
+
+        votos.push({
+            etapa: etapas[etapaAtual].titulo,
+            voto: numero
+        })
         console.log('confirmando como '+numero)
     }
 
@@ -113,7 +124,8 @@ function confirma() {
         if(etapas[etapaAtual] !== undefined){
             comecarEtapa()
         } else {
-            console.log ("FIM")
+            qS('.tela').innerHTML = '<div class="aviso--fim pisca">FIM</div>'
+            console.log(votos)
         }
     }
 }
