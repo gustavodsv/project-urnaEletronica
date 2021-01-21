@@ -132,9 +132,15 @@ body {
     font-size: 12px;
     margin-bottom: 5px;
 }
-.divisao-2{
+.d-2{
     height: 50px;
     font-size: 15px;
     border-top: 2px solid #000;
     padding: 8px;
+}
+
+.aviso--grande {
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 20px;
 }
