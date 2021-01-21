@@ -14,7 +14,7 @@ let etapas = [
             {
                 numero: '77222',
                 nome: 'Beltrano da Silva',
-                partido: 'DEFG',
+                partido: 'DEF',
                 fotos:[
                     {url:'77222.jpg', legenda: 'Vereador'}
                 ]
@@ -38,7 +38,7 @@ let etapas = [
             {
                 numero: '84',
                 nome: 'Zulano',
-                partido: 'QWERTY',
+                partido: 'DEF',
                 vice: 'Zul',
                 fotos:[
                     {url:'84.jpg', legenda: 'Prefeito'},
